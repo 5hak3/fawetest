@@ -2,7 +2,6 @@ package io.github.shake.faweapitest;
 
 import com.fastasyncworldedit.core.FaweAPI;
 import com.sk89q.worldedit.EditSession;
-import com.sk89q.worldedit.EditSessionBuilder;
 import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldedit.math.BlockVector3;

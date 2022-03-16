@@ -1,8 +1,6 @@
 package io.github.shake.faweapitest;
 
 import com.fastasyncworldedit.core.FaweAPI;
-import com.sk89q.worldedit.EditSession;
-import com.sk89q.worldedit.WorldEdit;
 import com.sk89q.worldedit.bukkit.BukkitAdapter;
 import com.sk89q.worldedit.function.operation.ForwardExtentCopy;
 import com.sk89q.worldedit.function.operation.Operations;
@@ -33,7 +31,6 @@ public class CopyPasteCommand implements CommandExecutor {
         if (sender instanceof Player) world = BukkitAdapter.adapt(((Player) sender).getLocation().getWorld());
         else world = FaweAPI.getWorld("world");
 
-        EditSession es = WorldEdit.getInstance().newEditSession(world);
         CuboidRegion select = new CuboidRegion(world, BlockVector3.at(x1, y1, z1), BlockVector3.at(x2, y2, z2));
         ForwardExtentCopy fec = new ForwardExtentCopy(world, select, world, BlockVector3.at(x3, y3, z3));
         Operations.complete(fec);
