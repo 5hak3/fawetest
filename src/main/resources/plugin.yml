@@ -1,0 +1,19 @@
+name: FAWEAPITest
+version: '${project.version}'
+main: io.github.shake.faweapitest.FAWEAPITest
+api-version: 1.17
+description: fawe api test plugin
+
+depend:
+  - FastAsyncWorldEdit
+
+commands:
+  faweset:
+    description: x1,y1,z1からx2,y2,z2の範囲にSTONEをセットする
+    usage: /<command> [x1] [y1] [z1] [x2] [y2] [z2]
+  fawerep:
+    description: x1,y1,z1からx2,y2,z2の範囲のSTONEをCOBBLESTONEに置換する
+    usage: /<command> [x1] [y1] [z1] [x2] [y2] [z2]
+  fawecpp:
+    description: x1,y1,z1からx2,y2,z2の範囲にあるブロックをx3,y3,z3を起点とした空間にコピーして貼り付ける
+    usage: /<command> [x1] [y1] [z1] [x2] [y2] [z2] [x3] [y3] [z3]
